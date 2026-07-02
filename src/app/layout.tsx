@@ -14,10 +14,52 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://buyeto.ng";
+const TITLE = "Buyeto | Digital Product Infrastructure for African Businesses";
+const DESCRIPTION =
+  "Buyeto builds custom software that helps businesses streamline operations and process payments — engineered around your goals.";
+
 export const metadata: Metadata = {
-  title: "Buyeto | Digital Product Infrastructure for African Businesses",
-  description:
-    "Buyeto builds software that helps merchants sell online, process payments, and streamline operations through tailored digital solutions.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: TITLE,
+    template: "%s | Buyeto",
+  },
+  description: DESCRIPTION,
+  keywords: [
+    "Buyeto",
+    "custom software Nigeria",
+    "digital infrastructure Africa",
+    "payments Nigeria",
+    "business software Africa",
+  ],
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: SITE_URL,
+    siteName: "Buyeto",
+    locale: "en_NG",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+};
+
+const ORGANIZATION_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Buyeto",
+  url: SITE_URL,
+  logo: `${SITE_URL}/images/Buyeto-black.png`,
+  email: "hello@buyeto.ng",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Abuja",
+    addressCountry: "NG",
+  },
 };
 
 export default function RootLayout({
@@ -31,6 +73,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-paper text-ink">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_JSON_LD) }}
+        />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
