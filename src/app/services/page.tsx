@@ -152,7 +152,7 @@ export default function ServicesPage() {
             </p>
           </div>
           <Link
-            href="/#book-a-call"
+            href="/book-a-call"
             className="shrink-0 rounded-full bg-ink px-6 py-3 text-sm font-medium text-paper transition-opacity hover:opacity-90"
           >
             Book a call

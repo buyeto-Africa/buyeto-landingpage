@@ -5,7 +5,7 @@ const CONTACT_EMAIL = "hello@buyeto.ng";
 const FOOTER_LINKS = {
   Company: [
     { label: "About", href: "/about-us" },
-    { label: "Book a call", href: "/#book-a-call" },
+    { label: "Book a call", href: "/book-a-call" },
   ],
   Services: [
     { label: "All services", href: "/services" },

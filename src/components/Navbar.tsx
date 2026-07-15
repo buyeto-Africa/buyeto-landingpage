@@ -45,7 +45,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <Link
-            href="/#book-a-call"
+            href="/book-a-call"
             className="rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-opacity hover:opacity-90"
           >
             Book a call

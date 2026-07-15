@@ -18,7 +18,7 @@ export default function About() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <p className="text-sm font-medium uppercase tracking-wide text-muted">
-              About us
+              {/* About us */}
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
               How we work.
