@@ -5,8 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const NAV_LINKS = [
-  { label: "Solutions", href: "#solutions" },
-  { label: "About", href: "#about" },
+  { label: "Solutions", href: "/#solutions" },
+  { label: "Services", href: "/services" },
+  { label: "About", href: "/about-us" },
 ];
 
 export default function Navbar() {
@@ -32,23 +33,23 @@ export default function Navbar() {
 
         <nav className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-sm font-medium text-ink/80 transition-colors hover:text-ink"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-3">
-          <a
-            href="#book-a-call"
+          <Link
+            href="/#book-a-call"
             className="rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-opacity hover:opacity-90"
           >
             Book a call
-          </a>
+          </Link>
 
           <button
             type="button"
@@ -96,14 +97,14 @@ export default function Navbar() {
         <nav className="border-t border-border bg-paper px-6 py-4 md:hidden">
           <div className="flex flex-col gap-4">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
                 className="text-sm font-medium text-ink/80 transition-colors hover:text-ink"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         </nav>

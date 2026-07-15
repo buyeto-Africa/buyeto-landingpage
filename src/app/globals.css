@@ -23,6 +23,11 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html {
+  /* Stop the elastic overscroll bounce from revealing the page background below the dark footer. */
+  overscroll-behavior-y: none;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

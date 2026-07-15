@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 const SITE_URL = "https://buyeto.ng";
 const TITLE = "Buyeto | Digital Product Infrastructure for African Businesses";
 const DESCRIPTION =
-  "Buyeto builds custom software that helps businesses streamline operations and process payments — engineered around your goals.";
+  "Buyeto builds custom software and digital platforms that help businesses streamline operations and run the systems behind them — engineered around your goals.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "Buyeto",
     "custom software Nigeria",
     "digital infrastructure Africa",
-    "payments Nigeria",
+    "digital platforms Africa",
     "business software Africa",
   ],
   openGraph: {

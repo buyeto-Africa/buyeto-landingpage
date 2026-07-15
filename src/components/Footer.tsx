@@ -4,12 +4,13 @@ const CONTACT_EMAIL = "hello@buyeto.ng";
 
 const FOOTER_LINKS = {
   Company: [
-    { label: "About", href: "#about" },
-    { label: "Book a call", href: "#book-a-call" },
+    { label: "About", href: "/about-us" },
+    { label: "Book a call", href: "/#book-a-call" },
   ],
-  Solutions: [
-    { label: "Custom software", href: "#solutions" },
-    { label: "Payments", href: "#solutions" },
+  Services: [
+    { label: "All services", href: "/services" },
+    { label: "Custom software", href: "/services" },
+    { label: "Digital platforms", href: "/services" },
   ],
   Contact: [{ label: CONTACT_EMAIL, href: `mailto:${CONTACT_EMAIL}` }],
 };

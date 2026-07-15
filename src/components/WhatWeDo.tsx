@@ -5,9 +5,9 @@ const PILLARS = [
       "Purpose-built applications designed around how your business actually operates.",
   },
   {
-    label: "Process payments",
+    label: "Digital platforms",
     description:
-      "Accept and manage payments securely, on infrastructure that scales as you grow.",
+      "Web and mobile products your customers sign up for, log into, and rely on every day.",
   },
   {
     label: "Streamline operations",
