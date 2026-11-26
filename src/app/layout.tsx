@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { CONTACT } from "@/lib/contact";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -54,11 +55,22 @@ const ORGANIZATION_JSON_LD = {
   name: "Buyeto",
   url: SITE_URL,
   logo: `${SITE_URL}/images/Buyeto-black.png`,
-  email: "hello@buyeto.ng",
+  legalName: CONTACT.company,
+  email: CONTACT.email,
+  telephone: CONTACT.phone,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Abuja",
-    addressCountry: "NG",
+    streetAddress: `${CONTACT.address.street}, ${CONTACT.address.area}`,
+    addressLocality: CONTACT.address.city,
+    addressRegion: CONTACT.address.region,
+    addressCountry: CONTACT.address.countryCode,
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    email: CONTACT.email,
+    telephone: CONTACT.phone,
+    areaServed: "NG",
   },
 };
 
