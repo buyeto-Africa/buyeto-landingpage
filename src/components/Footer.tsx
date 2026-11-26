@@ -1,10 +1,10 @@
 import Image from "next/image";
-
-const CONTACT_EMAIL = "hello@buyeto.ng";
+import { ADDRESS_ONE_LINE, CONTACT, MAP_URL } from "@/lib/contact";
 
 const FOOTER_LINKS = {
   Company: [
     { label: "About", href: "/about-us" },
+    { label: "Contact us", href: "/contact" },
     { label: "Book a call", href: "/book-a-call" },
   ],
   Services: [
@@ -12,7 +12,11 @@ const FOOTER_LINKS = {
     { label: "Custom software", href: "/services" },
     { label: "Digital platforms", href: "/services" },
   ],
-  Contact: [{ label: CONTACT_EMAIL, href: `mailto:${CONTACT_EMAIL}` }],
+  Contact: [
+    { label: CONTACT.email, href: `mailto:${CONTACT.email}` },
+    { label: CONTACT.phoneDisplay, href: `tel:${CONTACT.phone}` },
+    { label: `${CONTACT.address.street}, ${CONTACT.address.area}, ${CONTACT.address.city}`, href: MAP_URL },
+  ],
 };
 
 export default function Footer() {
@@ -54,8 +58,8 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col gap-2 border-t border-paper/10 pt-8 text-xs text-paper/40 sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; {year} Buyeto Ltd. All rights reserved.</p>
-          <p>RC 7719235 &middot; Abuja, Nigeria</p>
+          <p>&copy; {year} {CONTACT.company}. All rights reserved.</p>
+          <p>{CONTACT.rcNumber} &middot; {ADDRESS_ONE_LINE}</p>
         </div>
       </div>
     </footer>

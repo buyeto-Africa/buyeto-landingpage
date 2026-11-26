@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CalendlyEmbed from "@/components/CalendlyEmbed";
+import { CONTACT } from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "Book a call",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/book-a-call" },
 };
 
-const CONTACT_EMAIL = "hello@buyeto.ng";
+const CONTACT_EMAIL = CONTACT.email;
 
 // Buyeto's Calendly booking link. NEXT_PUBLIC_CALENDLY_URL overrides it if ever needed.
 const CALENDLY_URL =
